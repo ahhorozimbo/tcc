@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplicativo de Filtros OpenCV</title>
+    <link rel="stylesheet" href="tcc.css">
+</head>
+
+<body>
+    <h1>Aplicativo de Filtros OpenCV</h1>
+
+    <div class="navbar">
+        <a class="active" href="#" onclick="selectFilter('filtro1')">Filtro 1</a>
+        <a href="#" onclick="selectFilter('filtro2')">Filtro 2</a>
+        <a href="#" onclick="selectFilter('filtro3')">Filtro 3</a>
+    </div>
+    <div class="upload-button-container">
+        <input type="file" id="upload" accept="image/*">
+
+    </div>
+    <div class="main-container">
+
+
+        <div class="image-container">
+            <div class="drag-drop-area" ondrop="dropImage(event)" ondragover="allowDrop(event)">
+                <span id="drag-text">Arraste e solte a imagem aqui ou clique para carregar uma imagem</span>
+                <img id="uploadedImage" class="hidden">
+            </div>
+        </div>
+
+        <div class="filter-history">
+            <h2>Histórico de filtros</h2>
+            <ul id="filterList"></ul>
+        </div>
+    </div>
+
+    <div class="filter-info">
+        <div class="filter-explanation">
+            <h2>Último filtro aplicado</h2>
+            <p>Aqui será exibida a explicação do último filtro aplicado.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
